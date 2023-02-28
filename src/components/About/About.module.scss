@@ -1,0 +1,239 @@
+@import "../../../public/mixins.scss";
+@import "../../../public/variables.scss";
+#about {
+  :global {
+    @include page-setting;
+    padding-top: 1rem;
+    position: relative;
+    .aboutbgmix{
+      z-index: -1;
+      position: absolute;
+      inset: 0 -4rem;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(244, 144, 26, 0.18),
+        rgba(244, 144, 26, 0.05),
+        rgba(244, 144, 26, 0.009),
+        rgba(32, 41, 59, 0.09),
+        rgba(32, 41, 59, 0.3),
+        rgba(32, 41, 59, 0.392),
+        rgba(32, 41, 59, 0.1)
+      );
+      @include mq($md) {
+      inset: 0 -2rem;
+      }
+
+    }
+    .about-header{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+   .pageTitle{
+      font-family: $fontFamily;
+      @include font-size-titl;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+  }
+  .about-border{
+      background: $btn-bg;
+      height: 5px;
+      width: 10%;
+      transition: all 1s ease-in-out;
+  }
+  .about-header p{
+      letter-spacing: 2px;
+      padding: .5rem 0 0 0;
+      margin: 0;
+      @include font-sizeSubhdr;
+  }
+  .about-header p:hover ~ .about-border{
+  width: 50% !important;
+  }
+  .about-body{
+      margin-top: .7rem;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      @include mq($md) {
+        flex-direction: column;
+      }
+  }
+  .about-body .about-bg,
+  .about-body .about-skills
+  {
+      flex: 2 2 40%;
+      background: $btn-bg;
+      border-radius: 1rem;
+      padding: 10px;
+      transition: $transition;
+  }
+  .about-body .about-bg:hover,
+  .about-body .about-skills:hover
+  {
+      background: #a30fffe4;
+  }
+  .about-body h2{
+      transition:  $transition;
+      color: $bg;
+      border-bottom: 10px solid $white;
+      width: fit-content;
+  }
+  .about-body h2:hover{
+      background: $white;
+      border-radius: .2rem;
+  }
+  .about-body p{
+      display: flex;
+      flex-shrink: 1;
+      flex-wrap: wrap;
+      color: $pale-white;
+      @include font-sizeSubhdr;
+  }
+  .about-body p strong{
+      color: $bg;
+  
+  }
+  .about-body small{
+      color: $pale-white;
+  }
+  .about-body small i{
+      color: var(--bg);
+  }
+  .skills-list{
+      display: flex;
+      flex-direction: column;
+  }
+  .skills-list h3{
+      color: var(--bg);
+      font-size: 1rem;
+      margin: 0;
+      padding: 0;
+  }
+  .skills-list ul{
+      padding: 0 0 0 1rem;
+      margin: 0;
+  }
+  .skills-list ul li{
+      padding: .2rem 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+  }
+  .skills-list ul li span,
+  .skills-list ul li div{
+      flex: 1 1 50%;
+  }
+  .skills-list ul li div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--bg);
+      height: 10px;
+      border-radius: 1rem;
+      margin: 0;
+      padding: 0;
+      position: relative;
+  }
+  .skills-list ul li div span{
+      border-radius: 1rem;
+      height: 100% ;
+      width: 80%;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      position: absolute;
+      left: 0;
+  
+  }
+  .skills-list ul li div  .html{
+      width: 100% ;
+  }
+  .skills-list ul li div .css{
+      width: 100%;
+  }
+  .skills-list ul li div .js{
+      width: 90%;
+  }
+  .skills-list ul li div .react{
+      width: 80%;
+  }
+  .skills-list ul li div .node{
+      width:  70%;
+  }
+  .skills-list ul li div .ts{
+      width: 60% ;
+  }
+  .skills-list ul li div .bootstrap{
+  width: 90%;
+  }
+  .skills-list ul li div .figma{
+      width:  90%;
+  }
+  .skills-list ul li div .blenda{
+      width: 60%;
+  }
+  .about-body .about-medias{
+      flex: 1 1 20%;
+      margin: 0 2rem;
+      overflow-y: hidden;
+      border-radius: 2rem;
+  }
+  .about-body .about-medias ul{
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      @include mq($md) {
+      flex-direction: row;
+      }
+      @include mq($sm) {
+        gap: 2rem;
+      }
+  }
+  .about-body .about-medias ul li{
+      height: 4rem;
+      width: 4rem;
+      border: 1px solid var(--btn-bg);
+      border-radius: 50%;
+      transition: var(--transition);
+      margin-left: -2rem;
+      @include mq($md) {
+        height: 3rem;
+      width: 3rem;
+      }
+      @include mq($sm) {
+        height: 2rem;
+      width: 2rem;
+      }
+  }
+  .about-body .about-medias ul li:hover{
+      background: $btn-bg;
+      border: 1px solid $bg;
+  }
+  .about-body .about-medias ul li a{
+      font-size: 1.5rem;
+      width: 100%;
+      height: 100%;
+      color: $btn-bg;
+      cursor: $cursor;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      transition: $transition;
+      @include mq($sm) {
+      font-size: 1.2rem;
+
+      }
+  }
+  .about-body .about-medias ul li:hover a{
+      color: $bg;
+  }
+
+
+  }
+}

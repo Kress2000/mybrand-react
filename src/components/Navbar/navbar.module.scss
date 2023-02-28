@@ -1,0 +1,117 @@
+@import "../../../public/mixins.scss";
+@import "../../../public/variables.scss";
+
+#navbar {
+  :global {
+    position: relative;
+    max-width: 100vw;
+    margin-bottom: 1rem;
+    .small-nav {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      @include mq($md) {
+        display: flex;
+        height: 50px;
+      }
+      .logo{
+        height: 30px;
+      }
+      .hambaga{
+        height: 20px;
+        aspect-ratio: 1/1;
+        width: auto;
+      }
+    }
+    .nav-bar-box {
+      display: flex;
+      padding: 1rem 0;
+      justify-content: space-between;
+      @include mq($md) {
+        @include transition;
+        position: absolute;
+        margin-top: 1rem;
+        flex-direction: column;
+        background-color: $white;
+        color: $bg;
+        left: -10000vw;
+        top: -1rem;
+        z-index: 100;
+        min-height: 100vh;
+        bottom: 0;
+        padding-left: 1rem;
+      }
+      .logo {
+        height: 40px;
+      }
+      .nav-logo-box {
+        height: 50px;
+        @include mq($md) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: $bg;
+        }
+
+        #close-box {
+          display: none;
+          @include mq($md) {
+          display: flex;
+            color: $bg;
+          }
+        }
+        .tims {
+          color: $bg;
+          font-size: 1.2rem;
+          @include transition;
+          margin-right: 1rem;
+          &:hover{
+            background-color: $purple;
+          }
+        }
+      }
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        @include mq($md) {
+          flex-direction: column;
+          gap: 1rem;
+          min-width: 80vw;
+        }
+        .atag {
+          color: $white;
+          text-decoration: none;
+          cursor: $cursor;
+          @include transition;
+          @include mq($lg) {
+            font-size: 0.8rem;
+          }
+          @include mq($md) {
+            font-size: 1rem;
+            color: $bg;
+          }
+          &:hover {
+            color: $aqua;
+          }
+        }
+        .activ {
+          color: $aqua;
+        }
+      }
+      .nav-footer {
+        display: none;
+        @include mq($md) {
+          background-color: $white;
+          justify-content: center;
+          display: flex;
+        }
+        .allrigghts {
+          margin-left: 1rem;
+        }
+      }
+    }
+    .visibl{
+        left: 0;
+    }
+  }
+}

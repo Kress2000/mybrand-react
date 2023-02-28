@@ -1,0 +1,21 @@
+@import "../public/mixins.scss";
+@import "../public/variables.scss";
+.App {
+  text-align: center;
+  max-width: 100vw;
+  padding: 0 2rem 0 2rem;
+  cursor: url("../public/img/cursor.svg"), auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+  @include scroll-bar
+}
+@media screen and (max-width: 800px) {
+.App {
+
+  padding: 1rem;
+}
+}
+
