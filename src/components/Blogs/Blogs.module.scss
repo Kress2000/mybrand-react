@@ -1,0 +1,51 @@
+@import "../../../public/mixins.scss";
+@import "../../../public/variables.scss";
+
+#blogs {
+  :global {
+    @include page-setting;
+    .pageTitle {
+      @include font-size-titl;
+    }
+    .blogsBox > div {
+      flex: 1 1 30%;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 1.5rem;
+      box-shadow: 3px 3px 3px 3px rgba(164, 15, 255, 0.08);
+      background: var(--bg);
+      cursor: var(--cursor);
+      border: 1px solid var(--btn-bg);
+      transition: var(--transition);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 150px;
+
+    }
+    .blogsBox > div:hover {
+      border: 1px solid var(--white);
+    }
+    .blogsBox > div a {
+      transition: var(--transition);
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: calc(100% - 2rem);
+      padding: 0.5rem;
+      color: var(--white);
+      font-weight: bolder;
+      cursor: var(--cursor);
+      background-color: transparent;
+    }
+    .blogsBox > div a i {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+    }
+    .blogsBox > div:hover a {
+      transform: scale(1.5);
+    }
+  }
+}

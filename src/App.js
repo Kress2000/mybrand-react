@@ -3,6 +3,8 @@ import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from './components/HomePage/HomePage';
 import About from './components/About/About'
+import Experience from './components/experience/Experience'
+import Blogs from './components/Blogs/Blogs'
 
 function App() {
   const [cursorClass, setcursorClass] = useState(null);
@@ -41,6 +43,8 @@ function App() {
         <Navbar  />
         <HomePage />
         <About />
+        <Experience />
+        <Blogs />
       </div>
     </div>
   );

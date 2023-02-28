@@ -4,9 +4,13 @@ import { FaTimes } from "react-icons/fa";
 import { FcLike } from "react-icons/fc";
 
 export default function Navbar({ clickdBody }) {
-  const [activ, setActiv] = useState("01");
+  const [activ, setActiv] = useState("home");
   const [togglSmallNav, settogglSmallNav] = useState(false);
-  
+  const setActivFn = (id)=>{
+    console.log(id)
+    setActiv(id);
+    
+  }
   const navbarLinks = [
     { number: "01", name: "// home", id:"home" },
     { number: "02", name: "// about", id:"about" },
@@ -40,11 +44,10 @@ export default function Navbar({ clickdBody }) {
         </div>
         <ul className="nav-links">
           {navbarLinks.map((link, i) => (
-            <li key={link.id} onClick={() => setActiv(link.number)}>
+            <li key={link.id} onClick={() =>setActivFn(link.id)}>
               <a
                 href={link.id}
-                id={link.number}
-                className={activ === link.number ? "atag activ" : "atag"}
+                className={activ === link.id ? "atag activ" : "atag"}
               >
                 <small>{link.number}</small>
                 <span> {link.name}</span>

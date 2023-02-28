@@ -112,6 +112,9 @@
     .homepage-bottom {
       position: relative;
       margin-top: -4rem;
+      @include mq($md) {
+        margin-top: 0;
+      }
 
       .bgg {
         position: absolute;
@@ -162,8 +165,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        .arro{
-            font-size: 2rem;
+        .arro {
+          font-size: 2rem;
         }
       }
       .circle .fa-arrow-down {
