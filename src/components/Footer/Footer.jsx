@@ -7,20 +7,22 @@ export default function Footer() {
   const yar = tim.getFullYear();
   return (
     <div className={styles.footer} id="footer">
+      <div className="footerBg"></div>
       <footer className="boxx">
-        <div class="footer-logo">
-          <img src="./img/logo.png" alt="My Logo" class="logo" />
+        <div className="footer-logo">
+          <a href="#home">
+            <img src="./img/logo.png" alt="My Logo" className="logo" />
+          </a>
         </div>
-        <div class="footer-link">
+        <div className="footer-link">
           <span>
             <strong>
               &copy;
-              <span class="year">{yar}</span>
+              <span className="year">{yar}</span>
             </strong>
             All rights reserved
           </span>
-          <br />
-          <small>
+          <small className="madith">
             made with
             <div className="icons">
               <FcLike />

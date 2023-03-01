@@ -5,22 +5,31 @@
     @include page-setting;
     height: fit-content;
     background-color: var(--bg);
-    padding: 2rem;
     overflow: hidden;
-    .pageTitle{
-        @include font-size-titl;
+    position: relative;
+    .pageTitle {
+      @include font-size-titl;
     }
     .contact-box {
       margin-top: 1rem;
       display: flex;
       justify-content: space-between;
+      @include mq($md) {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
     }
-    .contact-box .contact-card {
+    .contact-card {
       display: flex;
       flex-direction: column;
       border-radius: 2rem;
       border: 1px solid var(--whiteopc);
       padding: 1rem;
+      @include mq($md) {
+        width: 100%;
+      }
     }
     .greetings {
       display: flex;
@@ -54,8 +63,8 @@
       border-bottom: 3px solid var(--btn-bg);
     }
     .sayHello a:hover {
-      background-color: var(--btn-bg);
       padding: 1rem;
+      background-color: var(--btn-bg);
     }
     .greetings .about-medias ul {
       display: flex;
@@ -70,6 +79,10 @@
       transition: var(--transition);
       cursor: var(--cursor);
       background-color: transparent;
+      @include mq($md) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
     .greetings .about-medias ul li a {
       color: var(--white);
@@ -95,23 +108,29 @@
 
     .contact-box .sent-mails {
       margin-left: 2rem;
-      padding: 0 !important;
-      width: fit-content !important;
+      padding: 0;
+      width: fit-content;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 1rem;
+      @include mq($md) {
+        display: none;
+      }
     }
     .mapouter {
       position: absolute;
       inset: 0;
-      border-radius: 2rem;
+      border-radius: 1rem;
     }
-
+    #gmap_canvas {
+      border-radius: 1rem;
+    }
     .way-to-footer {
       height: 5vh;
+      display: none;
       width: 100vw;
-      margin: 0;
-      padding: 0;
+      z-index: 1000;
       background-image: linear-gradient(
         to bottom,
         var(--bg),

@@ -3,25 +3,69 @@
 .footer {
   :global {
     @include page-setting;
+    position: relative;
+    padding: 2rem 0;
+    .footerBg {
+      position: absolute;
+      inset: 0 -2rem;
+      z-index: -1;
+      background-image: linear-gradient(to top, var(--bg), #12121e);
+    }
 
-     .boxx{
+    .boxx {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2rem;
-     }
-    .logo{
-      height: 30px;
-      @include mq($md) {
-      height: 25px;
-
+      @include mq($sm) {
+        flex-direction: column;
       }
     }
-    .year{
-      padding: 0 10px;
+    .footer-logo{
+      @include mq($sm) {
+        display: flex;
+        justify-content: flex-start;
+        align-self: flex-start;
+      }
+
     }
-    .link{
-      margin-left: 10px;
+    .logo {
+      height: 30px;
+      @include mq($md) {
+        height: 25px;
+      }
+    }
+    .footer-link {
+      flex-grow: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 2rem;
+      @include mq($md) {
+        padding-left: 1rem;
+      }
+      @include mq($sm) {
+        padding-left: .5rem;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+
+      }
+      .madith{
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+      @include mq($md) {
+        gap: 10px;
+      }
+      }
+      .year {
+        padding: 0 10px;
+      }
+      .link {
+        margin-left: 10px;
+        color: $aqua;
+      }
     }
   }
 }

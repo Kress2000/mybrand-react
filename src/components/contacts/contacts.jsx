@@ -43,16 +43,16 @@ export default function Contacts() {
 
   return (
     <div className={styles.contacts} id="contacts">
-      <h1 class="pageTitle">Get In Touch</h1>
-      <div class="contact-box">
-        <div class="contact-card  greetings">
+      <h1 className="pageTitle">Get In Touch</h1>
+      <div className="contact-box">
+        <div className="contact-card  greetings">
           <span>
-            Although I might not be able to know that you have visited me here,{" "}
+            Although I might not be able to know that you have visited me here,
             <strong>a visitor needs a sip for sure!</strong>
             My inbox is always open. Whether you have a question or just want to
             say hi, I’ll try my best to get back to you!
           </span>
-          <div class="sayHello">
+          <div className="sayHello">
             <a
               target="_blank"
               href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwPkjPmHgrWvtxdRjhmRVGFMjZgZxZsRHtMpCmvFtsGWpVgFqgrbjHHxXDFFQfhLcXltPlg"
@@ -60,10 +60,10 @@ export default function Contacts() {
               Say hello
             </a>
           </div>
-          <div class="about-medias">
+          <div className="about-medias">
             <ul>
               {findmhr.map((link) => (
-                <li key={link.icon}>
+                <li key={link.href}>
                   <a href={link.href} target={link.target}>
                     {link.icon}
                   </a>
@@ -72,9 +72,9 @@ export default function Contacts() {
             </ul>
           </div>
         </div>
-        <div class="contact-card sent-mails">
+        <div className="contact-card sent-mails">
           <div
-            class="mapouter"
+            className="mapouter"
             style={{
               position: "relative",
               textAlign: "right",
@@ -83,7 +83,7 @@ export default function Contacts() {
             }}
           >
             <div
-              class="gmap_canvas"
+              className="gmap_canvas"
               style={{
                 overflow: "hidden",
                 background: "none !important",
@@ -92,14 +92,15 @@ export default function Contacts() {
               }}
             >
               <iframe
+                title="X"
                 width="600"
                 height="500"
                 id="gmap_canvas"
                 src="https://maps.google.com/maps?q=00000%20kigali,%20nyarugenge,%20biryogo&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                frameborder="0"
+                frameBorder="0"
                 scrolling="no"
-                marginheight="0"
-                marginwidth="0"
+                marginHeight="0"
+                marginWidth="0"
               ></iframe>
               <a href="https://123movies-to.org">123movies</a>
               <br />
@@ -110,7 +111,7 @@ export default function Contacts() {
           </div>
         </div>
       </div>
-      <div class="way-to-footer"></div>
+      <div className="way-to-footer"></div>
     </div>
   );
 }

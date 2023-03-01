@@ -238,18 +238,20 @@
     .otherProjectsBox .engineer {
       justify-content: flex-end;
       left: -5%;
-      padding-left: 5%;
+      padding-left: 5% !important;
       @include mq(500px) {
         position: relative;
         inset: 0;
+        padding-left: 0 !important;
       }
     }
 
     .otherProjectsBox .studio {
       right: -5%;
-      padding-right: 5%;
+      padding-right: 5% !important;
       @include mq(500px) {
         right: 0;
+        padding-right: 0 !important;
       }
     }
 
@@ -262,7 +264,7 @@
         top: 1rem;
       }
     }
-    .otherProjectsBox #xx{
+    .otherProjectsBox #xx {
       @include mq(500px) {
         position: relative;
         inset: 0;
