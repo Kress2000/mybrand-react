@@ -1,7 +1,7 @@
 @import "../../../public/mixins.scss";
 @import "../../../public/variables.scss";
 
-#navbar {
+.navbar {
   :global {
     position: relative;
     max-width: 100vw;
@@ -14,10 +14,10 @@
         display: flex;
         height: 50px;
       }
-      .logo{
+      .logo {
         height: 30px;
       }
-      .hambaga{
+      .hambaga {
         height: 20px;
         aspect-ratio: 1/1;
         width: auto;
@@ -56,7 +56,7 @@
         #close-box {
           display: none;
           @include mq($md) {
-          display: flex;
+            display: flex;
             color: $bg;
           }
         }
@@ -65,7 +65,7 @@
           font-size: 1.2rem;
           @include transition;
           margin-right: 1rem;
-          &:hover{
+          &:hover {
             background-color: $purple;
           }
         }
@@ -110,12 +110,11 @@
         }
       }
     }
-    .visibl{
+    .visibl {
       position: fixed;
-        left: 0;
-        top: 0;
-        bottom: o;
-
+      left: 0;
+      top: 0;
+      bottom: o;
     }
   }
 }

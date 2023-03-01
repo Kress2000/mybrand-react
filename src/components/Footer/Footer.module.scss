@@ -1,0 +1,27 @@
+@import "../../../public/mixins.scss";
+@import "../../../public/variables.scss";
+.footer {
+  :global {
+    @include page-setting;
+
+     .boxx{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+     }
+    .logo{
+      height: 30px;
+      @include mq($md) {
+      height: 25px;
+
+      }
+    }
+    .year{
+      padding: 0 10px;
+    }
+    .link{
+      margin-left: 10px;
+    }
+  }
+}

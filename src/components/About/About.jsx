@@ -24,7 +24,7 @@ const findmhr =[
     {href: "https://www.figma.com/files/drafts?fuid=1090340226629167281", target: "_blank", icon: <FaFigma /> }
 ]
   return (
-    <div id={styles.about} >
+    <div className={styles.about} id="about" >
         <div className="aboutbgmix"></div>
         <div className="about-header">
             <h1 className="pageTitle">ABOUT ME</h1>

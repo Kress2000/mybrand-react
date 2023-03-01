@@ -4,7 +4,9 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from './components/HomePage/HomePage';
 import About from './components/About/About'
 import Experience from './components/experience/Experience'
-import Blogs from './components/Blogs/Blogs'
+import Blogs from './components/Blogs/Blogs';
+import Contacts from './components/contacts/contacts'
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [cursorClass, setcursorClass] = useState(null);
@@ -45,6 +47,8 @@ function App() {
         <About />
         <Experience />
         <Blogs />
+        <Contacts />
+        <Footer />
       </div>
     </div>
   );

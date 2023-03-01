@@ -1,0 +1,125 @@
+@import "../../../public/mixins.scss";
+@import "../../../public/variables.scss";
+.contacts {
+  :global {
+    @include page-setting;
+    height: fit-content;
+    background-color: var(--bg);
+    padding: 2rem;
+    overflow: hidden;
+    .pageTitle{
+        @include font-size-titl;
+    }
+    .contact-box {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    .contact-box .contact-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 2rem;
+      border: 1px solid var(--whiteopc);
+      padding: 1rem;
+    }
+    .greetings {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 2 1 40%;
+    }
+    .greetings span {
+      display: flex;
+      flex-wrap: wrap;
+      flex-shrink: 1;
+      line-height: 2rem;
+    }
+    .greetings span strong {
+      color: var(--cursor-bg);
+    }
+    .sayHello {
+      text-align: center;
+      height: 10vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .sayHello a {
+      color: var(--white);
+      font-weight: bolder;
+      cursor: var(--cursor);
+      transition: var(--transition);
+      border-radius: 0.3rem;
+      padding: 1rem 1rem 0 1rem;
+      border-bottom: 3px solid var(--btn-bg);
+    }
+    .sayHello a:hover {
+      background-color: var(--btn-bg);
+      padding: 1rem;
+    }
+    .greetings .about-medias ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+    .greetings .about-medias ul li {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      border: 1px solid var(--btn-bg);
+      transition: var(--transition);
+      cursor: var(--cursor);
+      background-color: transparent;
+    }
+    .greetings .about-medias ul li a {
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: var(--btn-bg);
+      transition: var(--transition);
+      cursor: var(--cursor);
+    }
+    .greetings .about-medias ul li a i {
+      font-size: 2rem;
+    }
+    .greetings .about-medias ul li:hover {
+      background-color: var(--btn-bg);
+      color: var(--white);
+    }
+    .greetings .about-medias ul li:hover a {
+      color: var(--white);
+    }
+
+    .contact-box .sent-mails {
+      margin-left: 2rem;
+      padding: 0 !important;
+      width: fit-content !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .mapouter {
+      position: absolute;
+      inset: 0;
+      border-radius: 2rem;
+    }
+
+    .way-to-footer {
+      height: 5vh;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background-image: linear-gradient(
+        to bottom,
+        var(--bg),
+        rgba(32, 41, 59, 0.5),
+        hsl(240, 25%, 9%, 0.3),
+        hsla(240, 25%, 9%, 0.5),
+        #12121e
+      );
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @import "../../../public/mixins.scss";
 @import "../../../public/variables.scss";
-#about {
+.about {
   :global {
     @include page-setting;
     padding-top: 1rem;

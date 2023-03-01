@@ -3,7 +3,7 @@ import styles from "./Experience.module.scss";
 
 export default function Experience() {
   return (
-    <div id={styles.experience}>
+    <div className={styles.experience} id="experience" >
       <h1 className="pageTitle">My Experiences</h1>
         <div className="animate"></div>
       <div className="exp-box exp1">

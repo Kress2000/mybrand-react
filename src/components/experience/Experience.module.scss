@@ -1,7 +1,7 @@
 @import "../../../public/mixins.scss";
 @import "../../../public/variables.scss";
 
-#experience {
+.experience {
   :global {
     @include page-setting;
     padding-top: 2rem;

@@ -1,6 +1,6 @@
 @import "../../../public/mixins.scss";
 @import "../../../public/variables.scss";
-#home {
+.home {
   :global {
     @include page-setting;
     display: flex;

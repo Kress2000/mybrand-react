@@ -16,11 +16,11 @@ export default function Navbar({ clickdBody }) {
     { number: "02", name: "// about", id:"about" },
     { number: "03", name: "// experience", id:"experience"},
     { number: "04", name: "// blogs", id:"blogs" },
-    { number: "05", name: "// Contacts", id:"Contacts"},
+    { number: "05", name: "// Contacts", id:"contacts"},
     { number: "06", name: "// sign up", id:"signUp" },
   ];
   return (
-    <div id={styles.navbar}>
+    <div className={styles.navbar} id="navbar">
       {!togglSmallNav && (
         <div className="small-nav" id="small-nav">
           <img src="./img/logo.png" alt="My Logo" className="logo" />
@@ -44,9 +44,9 @@ export default function Navbar({ clickdBody }) {
         </div>
         <ul className="nav-links">
           {navbarLinks.map((link, i) => (
-            <li key={link.id} onClick={() =>setActivFn(link.id)}>
+            <li key={link.number} onClick={() =>setActivFn(link.id)}>
               <a
-                href={link.id}
+                href={`#${link.id}`}
                 className={activ === link.id ? "atag activ" : "atag"}
               >
                 <small>{link.number}</small>

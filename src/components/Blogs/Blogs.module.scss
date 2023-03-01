@@ -1,7 +1,7 @@
 @import "../../../public/mixins.scss";
 @import "../../../public/variables.scss";
 
-#blogs {
+.blogs {
   :global {
     @include page-setting;
     .pageTitle {

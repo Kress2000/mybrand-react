@@ -11,7 +11,7 @@ export default function Blogs() {
     { href: "#", icon: <FaLaughWink />, name: "Stories" },
   ];
   return (
-    <div id={styles.blogs}>
+    <div className={styles.blogs} id="blogs">
       <h1 className="pageTitle">Blogs</h1>
       <div className="blogsBox">
         {blogsDATA.map((blog) => (

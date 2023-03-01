@@ -6,7 +6,7 @@ import {BsArrowDown} from 'react-icons/bs'
 export default function HomePage() {
     const target = "_blank"
   return (
-    <div id={styles.home} >
+    <div className={styles.home} id="home">
                 <div className="homepage-boxes box">
                     <img src="./img/squaresHome.svg" alt="Squares" className="square-boxes" />
                     <div className="glowing-box">
